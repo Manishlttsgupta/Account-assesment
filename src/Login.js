@@ -14,7 +14,7 @@ const Login = () => {
         if (user && user.email === email && user.password === password) {
             setError('');
             console.log('Login successful:', { email });
-            navigate('/account'); // Redirect to account page
+            navigate('/account'); 
         } else {
             setError('Invalid email or password');
         }

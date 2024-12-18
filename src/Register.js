@@ -9,7 +9,7 @@ const Register = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!/\S+@\S+\.\S+/.test(email)) {
-            setError('Please enter a valid email address.');
+            setError('Please enter a valid email address');
             return;
         }
         if (password.length < 6) {
@@ -18,7 +18,7 @@ const Register = () => {
         }
         setError('');
 
-        // Store user credentials in local storage
+       
         localStorage.setItem('user', JSON.stringify({ name, email, password }));
         console.log('Registered:', { name, email, password });
     };

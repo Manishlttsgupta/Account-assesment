@@ -10,8 +10,8 @@ const Account = () => {
     const navigate = useNavigate();
 
     const handleLogout = () => {
-        localStorage.removeItem('user'); // Clear user data from local storage
-        navigate('/'); // Redirect to login page
+        localStorage.removeItem('user'); 
+        navigate('/'); 
     };
 
     const handleUpdateInfo = (e) => {
@@ -22,15 +22,15 @@ const Account = () => {
         }
         setError('');
 
-        // Update user info in local storage
+        
         const updatedUser  = { ...user, name: newName };
         if (newPassword) {
             updatedUser.password = newPassword; 
         }
         localStorage.setItem('user', JSON.stringify(updatedUser ));
-        setUser (updatedUser ); // Update the state to reflect changes
+        setUser (updatedUser ); 
         console.log('User  info updated:', updatedUser );
-        setNewPassword(''); // Clear the password input field
+        setNewPassword(''); 
     };
 
     return (
